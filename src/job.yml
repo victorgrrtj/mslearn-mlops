@@ -5,9 +5,10 @@ command: >-
   --training_data ${{inputs.training_data}}
   --reg_rate ${{inputs.reg_rate}}
 inputs:
-  training_data: 
-    type: uri_file
-    path: ../experimentation/data/diabetes-dev.csv
+  training_data:
+    mode: download
+    type: uri_folder
+    path: ../experimentation/data/
   reg_rate: 0.01
 environment: azureml:AzureML-sklearn-0.24-ubuntu18.04-py37-cpu@latest
 compute: azureml:azuremlteste
